@@ -4,24 +4,6 @@
 
 let
   sources = {
-    "@babel/runtime-7.10.2" = {
-      name = "_at_babel_slash_runtime";
-      packageName = "@babel/runtime";
-      version = "7.10.2";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/@babel/runtime/-/runtime-7.10.2.tgz";
-        sha512 = "6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==";
-      };
-    };
-    "hoist-non-react-statics-3.3.2" = {
-      name = "hoist-non-react-statics";
-      packageName = "hoist-non-react-statics";
-      version = "3.3.2";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/hoist-non-react-statics/-/hoist-non-react-statics-3.3.2.tgz";
-        sha512 = "/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==";
-      };
-    };
     "js-tokens-4.0.0" = {
       name = "js-tokens";
       packageName = "js-tokens";
@@ -31,13 +13,13 @@ let
         sha512 = "RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==";
       };
     };
-    "lit-jsx-1.0.7" = {
-      name = "lit-jsx";
-      packageName = "lit-jsx";
-      version = "1.0.7";
+    "lit-html-1.2.1" = {
+      name = "lit-html";
+      packageName = "lit-html";
+      version = "1.2.1";
       src = fetchurl {
-        url = "https://registry.npmjs.org/lit-jsx/-/lit-jsx-1.0.7.tgz";
-        sha512 = "Zea8EYE2Ps2yk87i5E8LeHmZPcA0HdOsaA5SsUPZPkenaPWhvDchOvlTV5+/OO6ZhrVjUCEhYSDMNz6TDxAkcQ==";
+        url = "https://registry.npmjs.org/lit-html/-/lit-html-1.2.1.tgz";
+        sha512 = "GSJHHXMGLZDzTRq59IUfL9FCdAlGfqNp/dEa7k7aBaaWD+JKaCjsAk9KYm2V12ItonVaYx2dprN66Zdm1AuBTQ==";
       };
     };
     "loose-envify-1.4.0" = {
@@ -76,15 +58,6 @@ let
         sha512 = "hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==";
       };
     };
-    "react-16.13.1" = {
-      name = "react";
-      packageName = "react";
-      version = "16.13.1";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/react/-/react-16.13.1.tgz";
-        sha512 = "YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==";
-      };
-    };
     "react-is-16.13.1" = {
       name = "react-is";
       packageName = "react-is";
@@ -94,15 +67,6 @@ let
         sha512 = "24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==";
       };
     };
-    "react-redux-7.2.0" = {
-      name = "react-redux";
-      packageName = "react-redux";
-      version = "7.2.0";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/react-redux/-/react-redux-7.2.0.tgz";
-        sha512 = "EvCAZYGfOLqwV7gh849xy9/pt55rJXPwmYvI4lilPM5rUT/1NxuuN59ipdBksRVSvz0KInbPnp4IfoXJXCqiDA==";
-      };
-    };
     "redux-4.0.5" = {
       name = "redux";
       packageName = "redux";
@@ -110,15 +74,6 @@ let
       src = fetchurl {
         url = "https://registry.npmjs.org/redux/-/redux-4.0.5.tgz";
         sha512 = "VSz1uMAH24DM6MF72vcojpYPtrTUu3ByVWfPL1nPfVRb5mZVTve5GnNCUV53QM/BZ66xfWrm0CTWoM+Xlz8V1w==";
-      };
-    };
-    "regenerator-runtime-0.13.5" = {
-      name = "regenerator-runtime";
-      packageName = "regenerator-runtime";
-      version = "0.13.5";
-      src = fetchurl {
-        url = "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.5.tgz";
-        sha512 = "ZS5w8CpKFinUzOwW3c83oPeVXoNsrLsaCoLtJvAClH135j/R77RuymhiSErhm2lKcwSCIpmvIWSbDkIfAqKQlA==";
       };
     };
     "routedux-1.0.4" = {
@@ -146,19 +101,14 @@ let
     version = "1.0.0";
     src = ./..;
     dependencies = [
-      sources."@babel/runtime-7.10.2"
-      sources."hoist-non-react-statics-3.3.2"
       sources."js-tokens-4.0.0"
-      sources."lit-jsx-1.0.7"
+      sources."lit-html-1.2.1"
       sources."loose-envify-1.4.0"
       sources."object-assign-4.1.1"
       sources."prop-types-15.7.2"
       sources."ramda-0.26.1"
-      sources."react-16.13.1"
       sources."react-is-16.13.1"
-      sources."react-redux-7.2.0"
       sources."redux-4.0.5"
-      sources."regenerator-runtime-0.13.5"
       sources."routedux-1.0.4"
       sources."symbol-observable-1.2.0"
     ];

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "sourceType": "module",
-  "main": "src/index.js",
+  "main": "index.html",
   "scripts": {
     "setup-env": "bash setup.sh",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,14 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lit-jsx": "^1.0.7",
-    "react": "^16.13.1",
-    "react-redux": "^7.2.0",
+    "lit-html": "^1.2.1",
     "redux": "^4.0.5",
     "routedux": "^1.0.4"
   },
   "devDependencies": {
     "eslint": "7.2.0",
-    "eslint-plugin-react": "7.20.0"
+    "snowpack": "^2.5.1"
   }
 }
